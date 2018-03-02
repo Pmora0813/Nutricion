@@ -50,6 +50,7 @@
             this.rbtBeta = new System.Windows.Forms.RadioButton();
             this.rbtAlfa = new System.Windows.Forms.RadioButton();
             this.webBrowser = new System.Windows.Forms.WebBrowser();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
             this.splitContainerMain.Panel1.SuspendLayout();
             this.splitContainerMain.Panel2.SuspendLayout();
@@ -89,6 +90,7 @@
             this.btnResultado.TabIndex = 2;
             this.btnResultado.Text = "Ver Resultado";
             this.btnResultado.UseVisualStyleBackColor = true;
+            this.btnResultado.Click += new System.EventHandler(this.btnResultado_Click);
             // 
             // gbPaciente
             // 
@@ -118,6 +120,11 @@
             // 
             this.nudCintura.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudCintura.Location = new System.Drawing.Point(106, 279);
+            this.nudCintura.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
             this.nudCintura.Name = "nudCintura";
             this.nudCintura.Size = new System.Drawing.Size(103, 23);
             this.nudCintura.TabIndex = 13;
@@ -131,6 +138,11 @@
             // 
             this.nudEstatura.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudEstatura.Location = new System.Drawing.Point(106, 241);
+            this.nudEstatura.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
             this.nudEstatura.Name = "nudEstatura";
             this.nudEstatura.Size = new System.Drawing.Size(103, 23);
             this.nudEstatura.TabIndex = 12;
@@ -149,6 +161,11 @@
             0,
             65536});
             this.nudPeso.Location = new System.Drawing.Point(106, 203);
+            this.nudPeso.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
             this.nudPeso.Name = "nudPeso";
             this.nudPeso.Size = new System.Drawing.Size(103, 23);
             this.nudPeso.TabIndex = 11;
@@ -161,6 +178,7 @@
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(106, 153);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(103, 23);
@@ -368,6 +386,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnResultado;
         private System.Windows.Forms.WebBrowser webBrowser;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }
 
